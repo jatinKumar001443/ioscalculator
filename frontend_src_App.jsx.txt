@@ -1,0 +1,35 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import ExpenseTracker from './components/ExpenseTracker';
+import InvestmentTracker from './components/InvestmentTracker';
+import BalanceSheet from './components/BalanceSheet';
+import ProfitLoss from './components/ProfitLoss';
+import BudgetGenerator from './components/BudgetGenerator';
+import AISuggestions from './components/AISuggestions';
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <div className="flex-grow p-8 bg-gray-50">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/expenses" element={<ExpenseTracker />} />
+            <Route path="/investments" element={<InvestmentTracker />} />
+            <Route path="/balance-sheet" element={<BalanceSheet />} />
+            <Route path="/profit-loss" element={<ProfitLoss />} />
+            <Route path="/budget-generator" element={<BudgetGenerator />} />
+            <Route path="/ai-suggestions" element={<AISuggestions />} />
+          </Routes>
+        </div>
+        <footer className="bg-green-700 text-white text-center py-4">
+          Financial App © 2025
+        </footer>
+      </div>
+    </Router>
+  );
+}
+
+export default App;

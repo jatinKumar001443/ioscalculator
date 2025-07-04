@@ -1,0 +1,21 @@
+
+import { Link } from 'react-router-dom';
+
+function Navbar() {
+  return (
+    <nav className="bg-green-700 p-4 text-white flex justify-between items-center">
+      <div className="font-bold text-xl">FinanceWebApp</div>
+      <div className="space-x-4">
+        <Link to="/" className="hover:underline">Home</Link>
+        <Link to="/expenses" className="hover:underline">Expense Tracker</Link>
+        <Link to="/investments" className="hover:underline">Investment Tracker</Link>
+        <Link to="/balance-sheet" className="hover:underline">Balance Sheet</Link>
+        <Link to="/profit-loss" className="hover:underline">Profit Loss</Link>
+        <Link to="/budget-generator" className="hover:underline">Budget Generates (AI)</Link>
+        <Link to="/ai-suggestions" className="hover:underline">AI Suggestions About</Link>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
